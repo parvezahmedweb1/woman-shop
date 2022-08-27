@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Onea Shop</title>
+    <!-- ! boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- ! daisyui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- ! tailwindcss CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -13,14 +24,174 @@
           fontFamily: {
             pop: ["Poppins", "sans-serif"],
           },
+          container: {
+            padding: {
+              DEFAULT: "1rem",
+              sm: "2rem",
+              lg: "4rem",
+              xl: "5rem",
+              "2xl": "6rem",
+            },
+          },
           extend: {
             colors: {
-              clifford: "#da373d",
+              subTitle: "hsl(353deg 100% 78%)",
             },
           },
         },
       };
     </script>
   </head>
-  <body></body>
+  <body>
+    <!----------------------------------------
+        HEADER SECTION START
+    ----------------------------------------->
+    <header>
+      <!-- ! navber -->
+      <div class="navbar bg-base-100 px-10">
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-3xl">Onea.</a>
+        </div>
+
+        <div class="flex-none">
+          <!-- ! nav -->
+          <nav>
+            <ul class="md:flex hidden space-x-4 font-medium">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">CATEGORIES</a></li>
+              <li><a href="#">MEN'S</a></li>
+              <li><a href="#">BLOG</a></li>
+              <li><a href="#">CONTACT US</a></li>
+            </ul>
+          </nav>
+          <div class="dropdown dropdown-end ml-5">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+              <div class="indicator">
+                <i class="bx bx-shopping-bag text-3xl"></i>
+                <span class="badge badge-sm indicator-item bg-rose-400 border-0"
+                  >8</span
+                >
+              </div>
+            </label>
+            <div
+              tabindex="0"
+              class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow"
+            >
+              <div class="card-body">
+                <span class="font-bold text-lg">8 Items</span>
+                <span class="text-info">Subtotal: $999</span>
+                <div class="card-actions">
+                  <button class="btn btn-primary btn-block">View cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown dropdown-end md:hidden">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div>
+                <i class="bx bx-menu text-3xl"></i>
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">CATEGORIES</a></li>
+              <li><a href="#">MEN'S</a></li>
+              <li><a href="#">BLOG</a></li>
+              <li><a href="#">CONTACT US</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- ! banner -->
+      <div class="">
+        <div class="carousel w-full">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="images/banner-1.jpg" class="w-full" />
+            <div class="absolute left-20 h-full flex items-center">
+              <div>
+                <h4 class="text-sm md:text-xl text-subTitle mb-2">
+                  Trending Item
+                </h4>
+                <h1 class="text-2xl md:text-5xl lg:text-7xl font-extrabold">
+                  WOMEN'S <br />
+                  LATEST <br />
+                  FASHION SALE
+                </h1>
+                <p class="text-slate-600 md:text-2xl text-xl mb-2">
+                  starting at $ 20.00
+                </p>
+                <button class="btn bg-subTitle border-0 md:px-10 px-4">
+                  Shop Now
+                </button>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide3" class="">❮</a>
+              <a href="#slide2" class="">❯</a>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="images/banner-2.jpg" class="w-full" />
+            <div class="absolute left-20 h-full flex items-center">
+              <div>
+                <h4 class="text-sm md:text-xl text-subTitle mb-2">
+                  Trending Accessories
+                </h4>
+                <h1 class="text-2xl md:text-5xl lg:text-7xl font-extrabold">
+                  MODERN <br />
+                  SUNGLASSES
+                </h1>
+                <p class="text-slate-600 md:text-2xl text-xl mb-2">
+                  starting at $ 20.00
+                </p>
+                <button class="btn bg-subTitle border-0 md:px-10 px-4">
+                  Shop Now
+                </button>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide1" class="">❮</a>
+              <a href="#slide3" class="">❯</a>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="images/banner-3.jpg" class="w-full" />
+            <div class="absolute left-20 h-full flex items-center">
+              <div>
+                <h4 class="text-sm md:text-xl text-subTitle mb-2">
+                  Sale Offer
+                </h4>
+                <h1 class="text-2xl md:text-5xl lg:text-7xl font-extrabold">
+                  NEW FASHION <br />
+                  SUMMER SALE
+                </h1>
+                <p class="text-slate-600 md:text-2xl text-xl mb-2">
+                  starting at $ 20.00
+                </p>
+                <button class="btn bg-subTitle border-0 md:px-10 px-4">
+                  Shop Now
+                </button>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide2" class="">❮</a>
+              <a href="#slide1" class="">❯</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!----------------------------------------
+        HEADER SECTION END
+    ----------------------------------------->
+  </body>
 </html>
